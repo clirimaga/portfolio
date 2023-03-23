@@ -1,0 +1,268 @@
+* {
+  max-width: 99vw;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* progress  */
+.progressWrapper {
+  background-color: black;
+  height: 8px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+.progressStyle {
+  height: 8px;
+  background-color: #133e70;
+}
+
+/* navbar  */
+.navbar {
+  position: sticky;
+  color: black;
+  top: 0;
+  background: linear-gradient(
+    to left,
+    rgba(14, 50, 89, 0.9),
+    rgba(14, 50, 89, 0.8)
+  );
+  z-index: 3;
+  height: 80px;
+  transition: all 0.3s;
+}
+.navbar.active {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+.skillsbar {
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 3px;
+  border-bottom: 2px solid transparent;
+}
+.skillsbar:hover {
+  border-radius: 5px;
+  color: white;
+  border-bottom: 2px solid #0c3665;
+}
+
+.skillsbar.nav-link.active {
+  color: white;
+}
+/* sidebar */
+.sidebar {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: rgba(14, 50, 89, 0.5);
+  border-radius: 3rem;
+  bottom: 50%;
+  gap: 0.8rem;
+  left: 92%;
+  min-height: 100px;
+  position: fixed;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: -webkit-max-content;
+  width: max-content;
+  z-index: 2;
+}
+.lightdarkicon {
+  margin-left: 5px;
+  width: 25px;
+  height: 25px;
+}
+.lightdarkicon:hover {
+  cursor: pointer;
+}
+.langselect {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+/* darkmode */
+#dark {
+  background-color: rgb(31, 28, 28);
+  color: white;
+}
+
+/* card */
+.mycard {
+  width: 18rem;
+  border: 2px solid #0c55a7;
+}
+.maincolor {
+  color: #0c55a7;
+}
+.links {
+  width: 5rem;
+  background-color: #0c55a7;
+}
+.links:hover {
+  background-color: #0c3665;
+}
+#dark .mycard {
+  background-color: #0e3259;
+}
+
+.aboutp {
+  width: 75%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.aboutpshow {
+  width: 100%;
+  height: auto;
+  max-height: 100rem;
+  transition: all 0.5s;
+}
+
+/* skill */
+#techskills {
+  background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879786/wave_2_lx2qs3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.skill {
+  max-width: 5rem;
+  transition: 0.5s;
+}
+
+.skilltitle {
+  color: #041529;
+}
+
+.skill:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#dark .skilltitle {
+  color: white;
+}
+
+/* projects */
+#projects img {
+  border-radius: 1rem;
+  width: 25rem;
+}
+
+.filterby {
+  border: none;
+}
+#dark .filterby {
+  color: white;
+  background-color: rgb(31, 28, 28);
+  border: none;
+}
+
+.piccont {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(14, 50, 89, 0.5);
+}
+
+.piccont:hover .overlay {
+  opacity: 1;
+}
+
+.imgtext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* contact */
+#contact {
+  color: white;
+  background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879776/wave_qscdts.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* button */
+
+.projectBtn {
+  border-bottom: 1px solid #0c55a7;
+  padding: 5px;
+  position: relative;
+  color: black;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+}
+#dark .projectBtn {
+  color: white;
+}
+
+.projectBtn:before,
+.projectBtn:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.projectBtn:hover {
+  color: white;
+  transition-delay: 0.3s;
+}
+
+.projectBtn:hover:before {
+  transition-delay: 0s;
+}
+
+.projectBtn:hover:after {
+  background-color: #0c55a7;
+  transition-delay: 0.3s;
+}
+
+.from-top:before,
+.from-top:after {
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+.from-top:before {
+  bottom: 0;
+  border: 1px solid #0c55a7;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.from-top:after {
+  top: 0;
+  height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+  height: 100%;
+}

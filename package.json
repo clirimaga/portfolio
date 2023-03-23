@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "aos": "^2.3.4",
+    "react-tsparticles": "^2.9.3",
+    "tsparticles": "^2.9.3"
+  }
+}

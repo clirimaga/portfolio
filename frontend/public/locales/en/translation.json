@@ -1,0 +1,38 @@
+{
+    "Navbar": {
+        "1": "Tech Skills",
+        "2": "Projects",
+        "3": "Contact"
+    },
+    "Hi": {
+        "1": "Hi there"
+    },
+    "Who" :{
+        "1": "I am Çlirim Sadiku, a"
+    },
+    "Profile": {
+        "1": "Analytical and detail-oriented Web Developer with a knack for conceptualizing and delivering elegant, user-friendly solutions effectively and efficiently. Regular participant of hackathons and web developer meetups."
+    },
+    "Skills": {
+        "1": "My Technical Skills"
+    },
+    "Projects": {
+        "1": "Some of my projects",
+        "2": "Filter by: ",
+        "3": "All Projects",
+        "4": "Complexity: High",
+        "5": "Complexity: Medium",
+        "6": "Complexity: Low",
+        "7": "Built with:"
+
+    },
+    "Contact": {
+        "1": "If you want to exchange experiences,are looking for a passionate full-stack developer,have questions or want to connect,don't hesitate to contact me.I am happy to get in touch.",
+        "2": "Made with ❤️ and ☕",
+        "3": "Contact",
+        "4": "Your Name",
+        "5": "Your Email Adress",
+        "6": "Your Message",
+        "7": "Send"
+    }
+}

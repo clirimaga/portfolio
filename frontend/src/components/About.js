@@ -15,7 +15,10 @@ export default function About() {
       data-aos="zoom-out-left"
     >
       <div>
-        <h3>{t("Hi.1")}👋</h3>
+        <div className="d-flex my-3 gap-2 align-items-center">
+        <img className="wavinghand" src='https://res.cloudinary.com/dffxhlnzz/image/upload/v1679737147/portfolio/hand-removebg-preview_ha4ym2.png' alt='waving hand' />
+        <h3>{t("Hi.1")}</h3>
+        </div>
         <h3>{t("Who.1")}</h3>
         <TypeAnimation
           sequence={[

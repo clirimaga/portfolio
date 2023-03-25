@@ -24,6 +24,7 @@
   position: sticky;
   color: black;
   top: 0;
+  font-size: 1.1rem;
   background: linear-gradient(
     to left,
     rgba(14, 50, 89, 0.9),
@@ -31,12 +32,15 @@
   );
   z-index: 3;
   height: 80px;
+  max-height: auto;
   transition: all 0.3s;
 }
 .navbar.active {
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
 }
+
+
 .skillsbar {
   color: white;
   border-radius: 5px;
@@ -61,7 +65,7 @@
   border-radius: 3rem;
   bottom: 50%;
   gap: 0.8rem;
-  left: 92%;
+  left: 95%;
   min-height: 100px;
   position: fixed;
   -webkit-transform: translateX(-50%);
@@ -69,6 +73,14 @@
   width: -webkit-max-content;
   width: max-content;
   z-index: 2;
+}
+@media only screen and (max-width: 992px) {
+  #basic-navbar-nav{
+    background-color: rgba(14, 50, 89,0.5);
+  }
+  .skillsbar {
+    color: #ffffff;
+  }
 }
 .lightdarkicon {
   margin-left: 5px;
@@ -122,7 +134,22 @@
   max-height: 100rem;
   transition: all 0.5s;
 }
+.wavinghand {
+  width: 10rem;
+  animation: wave 2.5s infinite linear;
+}
 
+@keyframes wave {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
 /* skill */
 #techskills {
   background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879786/wave_2_lx2qs3.svg");
@@ -149,6 +176,9 @@
 }
 
 /* projects */
+.project{
+  border-top: 1px solid #041529;
+}
 #projects img {
   border-radius: 1rem;
   width: 25rem;

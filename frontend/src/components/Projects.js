@@ -4,6 +4,7 @@ import axiosClient from "./axiosClient";
 import { useTranslation } from "react-i18next";
 import "./components.css";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { RiExternalLinkLine } from "react-icons/ri";
 import Spinner from "react-bootstrap/Spinner";
 
 import AOS from "aos";
@@ -92,13 +93,15 @@ export default function Projects() {
                     );
                   })}
                 </div>
-                <div className="piccont">
+                <div  >
+                  <div className="piccont">
                   <a href={project.link} target="_blank">
                     <img src={project.pic} alt="project" />
                     <div className="overlay ">
-                      <div className="imgtext">Click to view!</div>
+                      <div className="imgtext">Click to view!<RiExternalLinkLine /></div>
                     </div>
                   </a>
+                    </div>
                 </div>
               </div>
             );

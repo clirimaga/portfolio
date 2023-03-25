@@ -26,17 +26,26 @@ function Navigator() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className="justify-content-end">
+            <Nav >
+          <span>
             <Nav.Link href="#techskills" className="skillsbar">
               {t("Navbar.1")}
             </Nav.Link>
+            </span>
+          <span>
+
             <Nav.Link href="#projects" className="skillsbar">
               {t("Navbar.2")}
             </Nav.Link>
+          </span>
+          <span>
+
             <Nav.Link href="#contact" className="skillsbar">
               {t("Navbar.3")}
             </Nav.Link>
+          </span>
           </Nav>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>

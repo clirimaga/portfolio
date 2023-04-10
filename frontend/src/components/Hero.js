@@ -5,9 +5,9 @@ import "./components.css";
 
 export default function Hero() {
   return (
-    <div className="row mt-5 justify-content-center">
+    <section className="row mt-5 justify-content-center">
       <MyCard />
       <About />
-    </div>
+    </section>
   );
 }

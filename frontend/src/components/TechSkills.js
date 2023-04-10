@@ -20,7 +20,7 @@ export default function TechSkills() {
   }, []);
 
   return (
-    <div className="row mt-5 text-center" data-aos="fade-down">
+    <section className="row mt-5 text-center" data-aos="fade-down">
       <div></div>
       <div id="techskills" className="row mt-5 text-center p-4">
         <h1 className="mb-2 skilltitle">{t("Skills.1")}</h1>
@@ -67,6 +67,6 @@ export default function TechSkills() {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

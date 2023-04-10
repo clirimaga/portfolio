@@ -43,7 +43,7 @@ export default function Projects() {
   }, [sort]);
 
   return (
-    <div id="projects" className="row mt-5 justify-content-center ">
+    <section id="projects" className="row mt-5 justify-content-center ">
       <div className="d-flex justify-content-center gap-2 align-items-center">
         <h1 className="text-center">{t("Projects.1")}</h1>
         <span>
@@ -108,6 +108,6 @@ export default function Projects() {
           })
         )}
       </div>
-    </div>
+    </section>
   );
 }

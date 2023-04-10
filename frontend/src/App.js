@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import ScrollBarIndicator from "./components/ScrollBarIndicator";
 import { createContext, useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import Sidebar from "./components/Sidebar";
 export const Context = createContext(null);
 
@@ -19,20 +19,24 @@ function App() {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
   const toggleLang = (lang) => {
-    setLang(lang)
-    i18n.changeLanguage(lang)
+    setLang(lang);
+    i18n.changeLanguage(lang);
   };
   return (
     <div>
       <ScrollBarIndicator className="container-fluid" />
       <Context.Provider value={{ theme, toggleTheme, lang, toggleLang }}>
         <div id={theme}>
-          <Navigator />
-          <Hero />
-          <TechSkills />
-          <Projects />
-          <ScrollToTop smooth />
-          <Sidebar />
+          <header>
+            <Navigator />
+          </header>
+          <main>
+            <Hero />
+            <TechSkills />
+            <Projects />
+            <ScrollToTop smooth />
+            <Sidebar />
+          </main>
           <Contact />
         </div>
       </Context.Provider>

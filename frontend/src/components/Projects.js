@@ -15,10 +15,11 @@ export default function Projects() {
   const [sort, setSort] = useState("Default");
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
-
+  
   const toggle = () => {
     setClicked(!clicked);
   };
+
   useEffect(() => {
     AOS.init();
     axiosClient
@@ -42,18 +43,20 @@ export default function Projects() {
       .catch((err) => console.log(err));
   }, [sort]);
 
+// sort projects everytime SORT changes depending on complexity
+ 
   return (
     <section id="projects" className="row mt-5 justify-content-center ">
       <div className="d-flex justify-content-center gap-2 align-items-center">
         <h1 className="text-center">{t("Projects.1")}</h1>
         <span>
-          <BsFillInfoCircleFill className="ms-2" onClick={toggle} />
+          <BsFillInfoCircleFill className="info ms-2" title='info' onClick={toggle} />
         </span>
         <div>
           <label>{t("Projects.2")}</label>
           <select
             className="filterby"
-            onChange={(e) => setSort(e.target.value)}
+            onChange={e => setSort(e.target.value)}
           >
             <option value="Default">{t("Projects.3")}</option>
             <option value="High">{t("Projects.4")}</option>
@@ -68,11 +71,12 @@ export default function Projects() {
             <Spinner animation="grow" variant="primary" />
           </div>
         ) : (
-          projects.map((project) => {
+          projects
+          .map((project) => {
             return (
               <div
                 key={project.id}
-                className="project col d-flex justify-content-around m-3 flex-wrap p-5 "
+                className="project col d-flex justify-content-around flex-wrap p-5 "
                 data-aos="fade-up"
               >
                 <div className="col-md-6 ">

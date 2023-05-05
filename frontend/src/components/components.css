@@ -6,7 +6,7 @@
 
 /* progress  */
 .progressWrapper {
-  background-color: black;
+  background-color: #11161c;
   height: 8px;
   position: sticky;
   top: 0;
@@ -58,6 +58,34 @@
 .skillsbar.nav-link.active {
   color: white;
 }
+/* scrollbutton */
+.scrollButton {
+  position: fixed;
+  bottom: 15%;
+  left: 95%;
+  width: -webkit-max-content;
+  width: max-content;
+  background: rgba(18, 64, 113,0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  -webkit-transform: translateX(-50%);
+  border-radius: 3rem;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scrollButton:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 4px 1px rgba(12, 46, 81, 0.8);
+}
+
+.arrow {
+  min-width: 1.5rem;
+  min-height: 2rem;
+  filter: invert();
+}
+
+
 /* sidebar */
 .sidebar {
   -webkit-backdrop-filter: blur(15px);
@@ -99,12 +127,14 @@
 
 /* darkmode */
 #dark {
-  background-color: rgb(31, 28, 28);
+  background-color:  #11161c;
+;
   color: white;
 }
 
 /* card */
 .mycard {
+  background-color: #f2f6fa;
   width: 18rem;
   border: 2px solid #0c55a7;
 }
@@ -121,7 +151,9 @@
 #dark .mycard {
   background-color: #0e3259;
 }
-
+.info:hover {
+  cursor: pointer;
+}
 .aboutp {
   width: 75%;
   max-height: 0;
@@ -153,10 +185,14 @@
 }
 /* skill */
 #techskills {
-  background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879786/wave_2_lx2qs3.svg");
+  background: linear-gradient(to right,  #f3f5f7,#e5ebf1);
+  /* background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879786/wave_2_lx2qs3.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+#dark #techskills {
+  background: linear-gradient(to right ,#11161c,#1d2530);
 }
 .skill {
   max-width: 5rem;
@@ -178,7 +214,15 @@
 
 /* projects */
 .project{
-  border-top: 1px solid #041529;
+  background:linear-gradient(to left,#f3f5f7,#f5f8fa);
+  margin: 2rem 1rem;
+  border: 2px solid #0e3259;
+  border-radius: 1rem;
+}
+#dark .project {
+  border: 2px solid #12447a;
+  background:linear-gradient(to left,#041527,#0a1e33);
+
 }
 #projects img {
   border-radius: 1rem;

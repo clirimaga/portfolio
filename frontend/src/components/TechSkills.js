@@ -4,12 +4,16 @@ import { useTranslation } from "react-i18next";
 import "./components.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Spinner from "react-bootstrap/Spinner";
+
 export default function TechSkills() {
   const [skills, setSkills] = useState([]);
+  const [loading,setLoading] = useState(false);
   const { t } = useTranslation();
 
   AOS.init();
   useEffect(() => {
+    setLoading(true)
     axiosClient
       .get("/skills")
       .then((res) => {
@@ -17,6 +21,7 @@ export default function TechSkills() {
         setSkills(res.data);
       })
       .catch((err) => console.log(err));
+      setLoading(false)
   }, []);
 
   return (
@@ -24,8 +29,11 @@ export default function TechSkills() {
       <div></div>
       <div id="techskills" className="row mt-5 text-center p-4">
         <h1 className="mb-2 skilltitle">{t("Skills.1")}</h1>
-        <div className="col-4 d-flex flex-column justify-content-center align-items-center gap-3">
-          {skills.map((skill) =>
+        <div className="mt-5 col-4 d-flex flex-column justify-content-center align-items-center gap-3">
+          {loading ? 
+          <div className="d-flex justify-content-center my-5">
+          <Spinner animation="grow" variant="primary" />
+        </div> :  skills.map((skill) =>
             skill.type === "Frontend" ? (
               <img
                 key={skill._id}

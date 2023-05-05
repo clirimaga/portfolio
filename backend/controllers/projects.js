@@ -22,6 +22,8 @@ const getProjects = async (req,res) =>{
             res.json(sortedProjects);
            }
           else res.json(allProjects);
+        } else {
+          res.json(allProjects)
         }
       } catch (error) {
         res.status(500).send(error.messages);

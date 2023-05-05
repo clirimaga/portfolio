@@ -9,6 +9,7 @@ import ScrollBarIndicator from "./components/ScrollBarIndicator";
 import { createContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Sidebar from "./components/Sidebar";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 export const Context = createContext(null);
 
 function App() {
@@ -34,7 +35,8 @@ function App() {
             <Hero />
             <TechSkills />
             <Projects />
-            <ScrollToTop smooth />
+            {/* <ScrollToTop smooth /> */}
+            <ScrollToTopButton />
             <Sidebar />
           </main>
           <Contact />

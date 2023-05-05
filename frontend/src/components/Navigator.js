@@ -19,7 +19,7 @@ function Navigator() {
   window.addEventListener("scroll", changeBackground);
   return (
     <nav>
-      <Navbar className={navbar ? "navbar active" : "navbar"} expand="lg">
+      <Navbar className={navbar ? "navbar active shadow" : "navbar shadow"} expand="lg">
         <Container>
           <Navbar.Brand href="/" className="skillsbar ps-2 pe-2">
             Ç.S

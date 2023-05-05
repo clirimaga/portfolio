@@ -15,8 +15,6 @@ app.get('/',(req,res) => {
     res.send('main page')
 })
 
-
-
 app.use('/projects', projectRouter)
 app.use('/skills',skillRouter)
 

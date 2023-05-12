@@ -56,7 +56,7 @@ export default function Contact() {
   };
 
   return (
-    <footer id="contact" className="row  p-5   mb-1" data-aos="fade-up">
+    <footer id="contact" className="row p-5 mb-1" data-aos="fade-up">
       <div className="col d-flex flex-column ">
         <p>{t("Contact.1")}</p>
         <p>© Çlirim Sadiku,2023.</p>

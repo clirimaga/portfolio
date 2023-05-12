@@ -1,9 +1,7 @@
 * {
-  max-width: 99vw;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-
 /* progress  */
 .progressWrapper {
   background-color: #11161c;
@@ -12,7 +10,6 @@
   top: 0;
   left: 0;
   z-index: 5;
-  width: 100%;
 }
 
 .progressStyle {
@@ -22,6 +19,7 @@
 
 /* navbar  */
 .navbar {
+  max-width: 100%;
   position: sticky;
   color: black;
   top: 0;
@@ -273,6 +271,7 @@
 
 /* contact */
 #contact {
+  max-width: 100%;
   color: white;
   background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879776/wave_qscdts.svg");
   background-position: center;

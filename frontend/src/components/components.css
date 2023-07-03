@@ -109,6 +109,19 @@
     color: #ffffff;
   }
 }
+
+@media screen and (max-width: 769px) {
+  .sidebar {
+  top:50%;
+  left: 85%;
+  }
+
+  .scrollButton {
+    bottom: 15%;
+    left: 85%;
+  }
+
+ }
 .lightdarkicon {
   margin-left: 5px;
   width: 25px;
@@ -184,10 +197,6 @@
 /* skill */
 #techskills {
   background: linear-gradient(to right,  #f3f5f7,#e5ebf1);
-  /* background-image: url("https://res.cloudinary.com/dffxhlnzz/image/upload/v1678879786/wave_2_lx2qs3.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 #dark #techskills {
   background: linear-gradient(to right ,#11161c,#1d2530);
@@ -214,11 +223,10 @@
 .project{
   background:linear-gradient(to left,#f3f5f7,#f5f8fa);
   margin: 2rem 1rem;
-  border: 2px solid #0e3259;
   border-radius: 1rem;
 }
 #dark .project {
-  border: 2px solid #12447a;
+  /* border: 2px solid #12447a; */
   background:linear-gradient(to left,#041527,#0a1e33);
 
 }

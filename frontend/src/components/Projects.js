@@ -11,7 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 export default function Projects() {
   const [projects, setProjects] = useState([]);
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
   const [sort, setSort] = useState("Default");
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();

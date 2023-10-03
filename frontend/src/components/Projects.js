@@ -9,13 +9,14 @@ import Spinner from "react-bootstrap/Spinner";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import New from "./UI/Badge";
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [clicked, setClicked] = useState(true);
   const [sort, setSort] = useState("Default");
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
-  
+
   const toggle = () => {
     setClicked(!clicked);
   };
@@ -43,20 +44,24 @@ export default function Projects() {
       .catch((err) => console.log(err));
   }, [sort]);
 
-// sort projects everytime SORT changes depending on complexity
- 
+  // sort projects everytime SORT changes depending on complexity
+
   return (
     <section id="projects" className="row mt-5 justify-content-center ">
       <div className="d-flex justify-content-center gap-2 align-items-center">
         <h1 className="text-center">{t("Projects.1")}</h1>
         <span>
-          <BsFillInfoCircleFill className="info ms-2" title='info' onClick={toggle} />
+          <BsFillInfoCircleFill
+            className="info ms-2"
+            title="info"
+            onClick={toggle}
+          />
         </span>
         <div>
           <label>{t("Projects.2")}</label>
           <select
             className="filterby"
-            onChange={e => setSort(e.target.value)}
+            onChange={(e) => setSort(e.target.value)}
           >
             <option value="Default">{t("Projects.3")}</option>
             <option value="High">{t("Projects.4")}</option>
@@ -71,8 +76,7 @@ export default function Projects() {
             <Spinner animation="grow" variant="primary" />
           </div>
         ) : (
-          projects
-          .map((project) => {
+          projects.map((project) => {
             return (
               <div
                 key={project.id}
@@ -97,15 +101,29 @@ export default function Projects() {
                     );
                   })}
                 </div>
-                <div  >
-                  <div className="piccont">
-                  <a href={project.link} target="_blank">
-                    <img src={project.pic} alt="project" />
-                    <div className="overlay ">
-                      <div className="imgtext">Click to view!<RiExternalLinkLine /></div>
+                <div
+                  style={{
+                    backgroundImage: `url(${project.pic})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                  className="piccont"
+                >
+                  {project.link &&  <a href={project.link} id="link1" rel="noopener noreferrer"  target="_blank" >
+                    <h1 className="imgtext">
+                      See it Live
+                      <RiExternalLinkLine />
+                    </h1>
+                  </a> }
+                    {/* <Badge>new</Badge> */}
+                  {project.code &&  <a href={project.code} id="link2" rel="noopener noreferrer" target="_blank">
+                    <div className="imgtext">
+                      See the Code
+                      <RiExternalLinkLine />
                     </div>
                   </a>
-                    </div>
+          }
                 </div>
               </div>
             );
